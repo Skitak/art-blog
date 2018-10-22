@@ -1,0 +1,59 @@
+$background-color : #F8F6FD;
+
+* {
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    min-height: 100%;
+    overflow-x: hidden;
+    background: $background-color;
+}
+
+html{
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Lato';
+    font-size: 18px;
+    color: #E98B4D;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+}
+
+p {
+    font-family: 'Lato';
+    font-size: 18px;
+    color: #555555;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+}
+
+h2 {
+    font-family: 'Open sans';
+    font-size: 28px;
+    font-weight: bold;
+    color: #595959;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-family: 'Open sans';
+    font-size: 18px;
+    font-weight: 300;
+    color: #595959;
+    letter-spacing: 2px;
+}

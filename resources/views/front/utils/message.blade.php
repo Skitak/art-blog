@@ -1,0 +1,1 @@
+<p class="server-message"> {{ $message }} </p>

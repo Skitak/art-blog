@@ -1,0 +1,106 @@
+.btn {
+    width : 200px;
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+    align-self: flex-end;
+}
+
+.btn-primary {
+    color : #E98B4D;
+    font-family: 'Lato';
+    font-weight: bold;
+    font-size: 24px;
+} 
+
+.btn-secondary {
+    color : #E98B4D;
+    font-family: 'Lato';
+    font-weight: 300;
+    font-style: italic;
+    font-size: 16px;
+} 
+
+.btn-success {} 
+
+.btn-danger {} 
+
+.btn-dark {}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    font-family: "Lato";
+    font-size: 18px;
+    font-weight: 400;
+    color: #2D2D2D;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.form-group-small {
+    width: 250px;
+}
+
+.form-inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+input, textarea {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: #C8D6E1;
+    color: #686868;
+    font-family: "Lato";
+    font-size: 18px; 
+    letter-spacing: 5px;
+    word-spacing: 3px;
+    padding: 13px 25px;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+    overflow: hidden;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #AEAEAE;
+}
+
+legend {
+    color: #2D2D2D;
+    margin-left: 50px;
+    align-self: flex-start;
+    font-family: 'Lato';
+    font-size: 18px;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.btn-form {
+    border: none;
+    color: rgb(235, 123, 48);
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    background: none;
+    &:hover {
+        cursor: pointer;
+    }
+}

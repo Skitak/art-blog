@@ -10,34 +10,30 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::group([/*'prefix' => 'admin',*/ 'middleware' => 'ip'], function(){
-
-//     Route::get('hola', function () {
-//         return view('welcome');
-//     })->name("bonjour");
-// });
-
-// Route::prefix('admin')->group(function () {
-//     Route::get('users', function () {
-//         // Matches The "/admin/users" URL
-//     });
-// });
-
-// Route::middleware('ip')->name("hola")->group(function(){
-//     Route::any('hi', "FrontController@index")->name("amigo");
-// });
-
-// Route::get('bonjour/{name}',
-// function ($name) {
-//     return view('welcome', [$name]);
-// })->name('bonjour');
 
 Route::get('/', "FrontController@index")->name('home');
-
-Route::get('article/{name}', "FrontController@article")->name('article');
-
-Route::get('galery/{name}',"FrontController@galery")->name('galery');
 
 Route::get('contact',"FrontController@contact")->name('contact');
 
 Route::get('about',"FrontController@about")->name('about');
+
+Route::get('article/{article}', "FrontController@article")->name('article');
+Route::get('article/{article}/next', "FrontController@nextArticle")->name('article.next');
+Route::get('article/{article}/previous', "FrontController@previousArticle")->name('article.previous');
+
+Route::name('galery.')->prefix("galery")->group(function(){
+    Route::get('/', "FrontController@galery")->name("home");
+    Route::get('{category}',"FrontController@galeryCategory")->name('category');
+    Route::get('{category}/{subcategory}',"FrontController@galerysubCategory")->name('sub-category');
+    Route::get('/{category}/{subcategory}/{galery}', "FrontController@galeryShow")->name("show");
+});
+
+Route::name('admin.')->prefix("admin")->group(function(){
+    Route::get('/', "BackController@index")->name("home");
+});
+
+Auth::routes();
+
+Route::resource('articles', 'ArticleController');
+Route::resource('galeries', 'GaleryController');
+Route::resource('comments', 'CommentController');
